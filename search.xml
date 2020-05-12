@@ -3,21 +3,17 @@
   <entry>
     <title>我的第一篇博客文章</title>
     <url>/2020/05/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><hr>
-<p>内容</p>
+    <content><![CDATA[<h2 id="函数调用所要进行的操作"><a href="#函数调用所要进行的操作" class="headerlink" title="函数调用所要进行的操作"></a>函数调用所要进行的操作</h2><hr>
 <ul>
-<li>列表一</li>
-<li>列表二<br>  a 子列表哦<br>  b 子列表哈<br><a href="https://www.hao123.com/?tn=02003390_38_hao_pg" target="_blank" rel="noopener">新客站导航</a><br><img src="" alt="图片"></li>
-</ul>
-<p><em>字体是斜线的</em><br><strong>字体加粗</strong><br><code>&lt;html&gt;&lt;/html&gt;</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;我是标题哦&lt;&#x2F;title&gt;</span><br><span class="line">&lt;boby&gt;&lt;&#x2F;boby&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<li>EBP<br>EBP：基址指针寄存器(extended base pointer)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的底部。</li>
+<li>ESP<br>ESP：栈指针寄存器(extended stack pointer)，其内存放着一个指针，该指针永远指向系统栈最上面一个栈帧的栈顶。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在函数调用之前，将调用者的函数（caller）的ebp存入栈，以便于在执行完毕后恢复现场是还原ebp的值。</span><br><span class="line">下一步，foo必须为它的局部变量分配空间，同时，也必须为它可能用到的一些临时变量分配空间。</span><br><span class="line">sub esp, 0cch；减去的值根据程序而定</span><br><span class="line">之后会根据情况看是否保存某些特定的寄存器（EBX，ESI和EDI）</span><br><span class="line">之后ebp的值会保持固定。此后局部变量和临时存储都可以通过基准指针EBP加偏移量找到了</span><br><span class="line">在函数执行完毕，控制流返回到调用者的函数（caller）之前会进行下述操作</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>我的内容是引用的！</p>
 </blockquote>
+</li>
+</ul>
 <hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn" target="_blank" rel="noopener">www.codesheep.cn</a></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://blog.csdn.net/TuxedoLinux/article/details/100921994" target="_blank" rel="noopener">https://blog.csdn.net/TuxedoLinux/article/details/100921994</a></p>
 ]]></content>
       <categories>
         <category>c++</category>
