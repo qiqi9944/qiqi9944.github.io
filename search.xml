@@ -6,34 +6,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>物理层</title>
-    <url>/2020/05/14/%E7%89%A9%E7%90%86%E5%B1%82/</url>
-    <content><![CDATA[<h2 id="物理层的传输媒体"><a href="#物理层的传输媒体" class="headerlink" title="物理层的传输媒体"></a>物理层的传输媒体</h2><hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> - 双绞线</span><br><span class="line">   屏蔽双绞线和无屏蔽双绞线。</span><br><span class="line">- 同轴电缆</span><br><span class="line">  </span><br><span class="line">- 光缆</span><br><span class="line">   在纤芯中不断的全反射 </span><br><span class="line">   分为多模光纤和单模光纤</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="信道复用技术"><a href="#信道复用技术" class="headerlink" title="信道复用技术"></a>信道复用技术</h2><ul>
-<li>频分复用<br>用户在分配到一定的频带后，在通信过程中自始至终都占用这个频带。<br>频分复用的所有用户在同样的时间占用不同的带宽资源（请注意，这里的“带宽”是频率带宽而不是数据的发送速率）</li>
-<li>时分复用<br>时分复用则是将时间划分为一段段等长的时分复用帧（TDM 帧）。每一个时分复用的用户在每一个 TDM 帧中占用固定序号的时隙。<br>每一个用户所占用的时隙是周期性地出现（其周期就是 TDM  帧的长度）<br>TDM 信号也称为等时(isochronous)信号<br>时分复用的所有用户是在不同的时间占用同样的频带宽度。<br> <img src="https://wx1.sinaimg.cn/mw690/0061Ojtjly1gernfqvaoaj30fn079t8x.jpg" alt="alt"><br> 但是有可能造成线路资源的浪费<br> <img src="https://wx2.sinaimg.cn/mw690/0061Ojtjly1gernpd0wklj30o2092t98.jpg" alt="alt"></li>
-<li>统计时分复用<br> 解决了时分复用的问题<br> <img src="https://wx4.sinaimg.cn/mw690/0061Ojtjly1gernpc9alyj30n809dgm5.jpg" alt="alt"></li>
-<li>码分复用 CDM<br> 常用的名词是码分多址 CDMA<br> 各用户使用经过特殊挑选的不同码型，因此彼此不会造成干扰。<br> 这种系统发送的信号有很强的抗干扰能力，其频谱类似于白噪声，不易被敌人发现。<br> 每一个比特时间划分为 m 个短的间隔，称为码片(chip)。<pre><code>每个站被指派一个唯一的 m bit 码片序列。
-如发送比特 1，则发送自己的 m bit 码片序列。
-如发送比特 0，则发送该码片序列的二进制反码。 
-例如，S 站的 8 bit 码片序列是 00011011。
-发送比特 1 时，就发送序列 00011011，
-发送比特 0 时，就发送序列 11100100。
-S 站的码片序列：(–1 –1 –1 +1 +1 –1 +1 +1)</code></pre></li>
-</ul>
-<hr>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>七层协议</title>
     <url>/2020/05/12/%E4%B8%83%E5%B1%82%E5%8D%8F%E8%AE%AE/</url>
     <content><![CDATA[<h2 id="OSI七层协议"><a href="#OSI七层协议" class="headerlink" title="OSI七层协议"></a>OSI七层协议</h2><hr>
@@ -57,6 +29,12 @@ S 站的码片序列：(–1 –1 –1 +1 +1 –1 +1 +1)</code></pre></li>
       </tags>
   </entry>
   <entry>
+    <title>数据链路层</title>
+    <url>/2020/05/14/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</url>
+    <content><![CDATA[<p><img src="/2020/05/14/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/hexo.png" alt></p>
+]]></content>
+  </entry>
+  <entry>
     <title>函数调用时用到的寄存器</title>
     <url>/2020/05/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h2 id="函数调用所要进行的操作"><a href="#函数调用所要进行的操作" class="headerlink" title="函数调用所要进行的操作"></a>函数调用所要进行的操作</h2><hr>
@@ -72,6 +50,34 @@ S 站的码片序列：(–1 –1 –1 +1 +1 –1 +1 +1)</code></pre></li>
 ]]></content>
       <categories>
         <category>c++</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>物理层</title>
+    <url>/2020/05/14/%E7%89%A9%E7%90%86%E5%B1%82/</url>
+    <content><![CDATA[<h2 id="物理层的传输媒体"><a href="#物理层的传输媒体" class="headerlink" title="物理层的传输媒体"></a>物理层的传输媒体</h2><hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> - 双绞线</span><br><span class="line">   屏蔽双绞线和无屏蔽双绞线。</span><br><span class="line">- 同轴电缆</span><br><span class="line">  </span><br><span class="line">- 光缆</span><br><span class="line">   在纤芯中不断的全反射 </span><br><span class="line">   分为多模光纤和单模光纤</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="信道复用技术"><a href="#信道复用技术" class="headerlink" title="信道复用技术"></a>信道复用技术</h2><ul>
+<li>频分复用<br>用户在分配到一定的频带后，在通信过程中自始至终都占用这个频带。<br>频分复用的所有用户在同样的时间占用不同的带宽资源（请注意，这里的“带宽”是频率带宽而不是数据的发送速率）</li>
+<li>时分复用<br>时分复用则是将时间划分为一段段等长的时分复用帧（TDM 帧）。每一个时分复用的用户在每一个 TDM 帧中占用固定序号的时隙。<br>每一个用户所占用的时隙是周期性地出现（其周期就是 TDM  帧的长度）<br>TDM 信号也称为等时(isochronous)信号<br>时分复用的所有用户是在不同的时间占用同样的频带宽度。<br> <img src="https://wx1.sinaimg.cn/mw690/0061Ojtjly1gernfqvaoaj30fn079t8x.jpg" alt="alt"><br> 但是有可能造成线路资源的浪费<br> <img src="https://wx2.sinaimg.cn/mw690/0061Ojtjly1gernpd0wklj30o2092t98.jpg" alt="alt"></li>
+<li>统计时分复用<br> 解决了时分复用的问题<br> <img src="https://wx4.sinaimg.cn/mw690/0061Ojtjly1gernpc9alyj30n809dgm5.jpg" alt="alt"></li>
+<li>码分复用 CDM<br> 常用的名词是码分多址 CDMA<br> 各用户使用经过特殊挑选的不同码型，因此彼此不会造成干扰。<br> 这种系统发送的信号有很强的抗干扰能力，其频谱类似于白噪声，不易被敌人发现。<br> 每一个比特时间划分为 m 个短的间隔，称为码片(chip)。<pre><code>每个站被指派一个唯一的 m bit 码片序列。
+如发送比特 1，则发送自己的 m bit 码片序列。
+如发送比特 0，则发送该码片序列的二进制反码。 
+例如，S 站的 8 bit 码片序列是 00011011。
+发送比特 1 时，就发送序列 00011011，
+发送比特 0 时，就发送序列 11100100。
+S 站的码片序列：(–1 –1 –1 +1 +1 –1 +1 +1)</code></pre></li>
+</ul>
+<hr>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
       </categories>
       <tags>
         <tag>导航</tag>
