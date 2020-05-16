@@ -58,6 +58,9 @@ B 若在 A 发送的信息到达 B 之前发送自己的帧(因为这时 B 的�
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
       <tags>
         <tag>导航</tag>
         <tag>分享</tag>
@@ -283,6 +286,9 @@ S 站的码片序列：(–1 –1 –1 +1 +1 –1 +1 +1)</code></pre></li>
 <li>接收方 WR：<br>只能接受窗口的大小的帧，收到后会移动窗口并且发送确认帧<br>WT&lt;=2的n次幂-1<br>WR&lt;=2的n-1次幂<br>WT+WR&lt;=2的n次幂</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
       <tags>
         <tag>导航</tag>
         <tag>分享</tag>
