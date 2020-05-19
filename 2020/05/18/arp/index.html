@@ -86,21 +86,20 @@
 
 
 
-<meta name="description" content="局域网的数据链路层局域网最主要的特点是：     网络为一个单位所拥有，且地理范围和站点数目均有限。（不含有网络层，因为它不需要路由器）局域网具有如下的一些主要优点：     - 具有广播功能，从一个站点可很方便地访问全网。局域网上的主机可共享连接在局域网上的各种硬件和软件资源。     - 便于系统的扩展和逐渐地演变，各设备的位置可灵活调整和改变。     - 提高了系统的可靠性、可用性和残存性">
+<meta name="description" content="ARP每一个主机都设有一个 ARP 高速缓存(ARP cache)，里面有所在的局域网上的各主机和路由器的 IP 地址到硬件地址的映射表。ARP属于网络层，将IP地址传换成帧为数据链路层提供服务不管网络层使用的是什么协议，在实际网络的链路上传送数据帧时，最终还是必须使用硬件地址。当主机 A 欲向本局域网上的某个主机 B 发送 IP 数据报时，就先在其 ARP 高速缓存中查看有无主机 B 的 IP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="局域网">
-<meta property="og:url" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/index.html">
+<meta property="og:title" content="地址解析协议 ARP">
+<meta property="og:url" content="http://yoursite.com/2020/05/18/arp/index.html">
 <meta property="og:site_name" content="林七七的博客">
-<meta property="og:description" content="局域网的数据链路层局域网最主要的特点是：     网络为一个单位所拥有，且地理范围和站点数目均有限。（不含有网络层，因为它不需要路由器）局域网具有如下的一些主要优点：     - 具有广播功能，从一个站点可很方便地访问全网。局域网上的主机可共享连接在局域网上的各种硬件和软件资源。     - 便于系统的扩展和逐渐地演变，各设备的位置可灵活调整和改变。     - 提高了系统的可靠性、可用性和残存性">
-<meta property="og:image" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/pu.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/tuo.png">
-<meta property="article:published_time" content="2020-05-14T08:48:25.000Z">
-<meta property="article:modified_time" content="2020-05-14T23:15:42.790Z">
+<meta property="og:description" content="ARP每一个主机都设有一个 ARP 高速缓存(ARP cache)，里面有所在的局域网上的各主机和路由器的 IP 地址到硬件地址的映射表。ARP属于网络层，将IP地址传换成帧为数据链路层提供服务不管网络层使用的是什么协议，在实际网络的链路上传送数据帧时，最终还是必须使用硬件地址。当主机 A 欲向本局域网上的某个主机 B 发送 IP 数据报时，就先在其 ARP 高速缓存中查看有无主机 B 的 IP">
+<meta property="og:image" content="http://yoursite.com/2020/05/18/arp/1.png">
+<meta property="article:published_time" content="2020-05-18T01:08:33.000Z">
+<meta property="article:modified_time" content="2020-05-18T03:56:51.873Z">
 <meta property="article:author" content="林丽">
 <meta property="article:tag" content="导航">
 <meta property="article:tag" content="分享">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/pu.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/18/arp/1.png">
 
 
 
@@ -130,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/05/14/c广播/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/18/arp/"/>
 
 
 
 
 
-  <title>局域网 | 林七七的博客</title>
+  <title>地址解析协议 ARP | 林七七的博客</title>
   
 
 
@@ -297,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/18/arp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林丽">
@@ -314,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">局域网</h1>
+          <h1 class="post-title" itemprop="name headline">地址解析协议 ARP</h1>
         
 
         <div class="post-meta">
@@ -326,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-14T16:48:25+08:00">
-                2020-05-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-18T09:08:33+08:00">
+                2020-05-18
               </time>
             
 
@@ -367,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/05/14/c%E5%B9%BF%E6%92%AD/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/14/c%E5%B9%BF%E6%92%AD/" itemprop="commentCount"></span>
+                <a href="/2020/05/18/arp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/18/arp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,22 +400,19 @@
       
 
       
-        <h2 id="局域网的数据链路层"><a href="#局域网的数据链路层" class="headerlink" title="局域网的数据链路层"></a>局域网的数据链路层</h2><p><strong>局域网最主要的特点是</strong>：<br>     网络为一个单位所拥有，且地理范围和站点数目均有限。（不含有网络层，因为它不需要路由器）<br><strong>局域网具有如下的一些主要优点：</strong><br>     - 具有广播功能，从一个站点可很方便地访问全网。<strong>局域网上的主机可共享连接在局域网上的各种硬件和软件资源。</strong><br>     - 便于系统的扩展和逐渐地演变，各设备的位置可灵活调整和改变。<br>     - 提高了系统的可靠性、可用性和残存性。<br>     - 将 802.3 局域网简称为“以太网”。<br><em>“以太网”应当是指符合 DIX Ethernet V2 标准的局域网</em> </p>
-<hr>
-<h2 id="局域网的拓扑"><a href="#局域网的拓扑" class="headerlink" title="局域网的拓扑"></a>局域网的拓扑</h2><p><img src="/2020/05/14/c%E5%B9%BF%E6%92%AD/pu.png" alt> <img src="/2020/05/14/c%E5%B9%BF%E6%92%AD/tuo.png" alt><br>我们物理上使用的星型拓扑，但是逻辑上仍然使用总线型。</p>
-<hr>
-<h2 id="数据链路层的两个子层"><a href="#数据链路层的两个子层" class="headerlink" title="数据链路层的两个子层"></a>数据链路层的两个子层</h2><p>为了使数据链路层能更好地适应多种局域网标准，将局域网的数据链路层拆成两个子层：</p>
+        <h2 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h2><p>每一个主机都设有一个 ARP 高速缓存(ARP cache)，里面有所在的局域网上的各主机和路由器的 IP 地址到硬件地址的映射表。<br>ARP属于网络层，将IP地址传换成帧为数据链路层提供服务<br><img src="/2020/05/18/arp/1.png" alt><br>不管网络层使用的是什么协议，在实际网络的链路上传送数据帧时，最终还是必须使用硬件地址。<br>当主机 A 欲向本局域网上的某个主机 B 发送 IP 数据报时，就先在其 ARP 高速缓存中查看有无主机 B 的 IP 地址。</p>
 <ul>
-<li>逻辑链路控制 LLC (Logical Link Control)子层</li>
-<li>媒体接入控制 MAC (Medium Access Control)子层。<pre><code>与接入到传输媒体有关的内容都放在 MAC子层,而 LLC 子层则与传输媒体无关
-不管采用何种协议的局域网对 LLC 子层来说都是透明的</code></pre></li>
+<li>如有，就可查出其对应的硬件地址，再将此硬件地址写入 MAC 帧，然后通过局域网将该 MAC 帧发往此硬件地址。 </li>
+<li>如没有就需要进行ARP地址解析<ul>
+<li>在同一局域网上面的地址解析<pre><code>通过广播进行获取，ARP请求分组里面有自己的IP地址和MAC地址，以及目的主机的IP地址。
+局域网上的所有主机都会收到这个ARP请求，但是之后IP地址匹配的主机才会对他进行响应
+会首先将自己的IP和MAC地址放入ARP响应中返回给源主机，并且会将这两个对应的MAC地址都写到缓存中，以备下次使用</code></pre></li>
+<li>不在同一个局域网<pre><code>因为不在同一个局域网中，就说明会经过多个路由器，经过几个路由器就要进行（n+1）次地址解析，
+每一次的首地址和目的地址都是传输的首尾，并且每经过一次传输，都会对请求进行拆分，重组，
+但是每一次其中的IP数据报不会发生变化。</code></pre></li>
 </ul>
 <hr>
-<h2 id="适配器的重要功能："><a href="#适配器的重要功能：" class="headerlink" title="适配器的重要功能："></a>适配器的重要功能：</h2><ul>
-<li>进行串行/并行转换。</li>
-<li>对数据进行缓存。</li>
-<li>在计算机的操作系统安装设备驱动程序。</li>
-<li>实现以太网协议。  </li>
+</li>
 </ul>
 
       
@@ -487,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/14/ppp%E5%8D%8F%E8%AE%AE/" rel="next" title="ppp协议">
-                <i class="fa fa-chevron-left"></i> ppp协议
+              <a href="/2020/05/17/%E7%BD%91%E7%BB%9C/" rel="next" title="网络层">
+                <i class="fa fa-chevron-left"></i> 网络层
               </a>
             
           </div>
@@ -497,8 +493,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/05/14/csma-cd%E5%8D%8F%E8%AE%AE/" rel="prev" title="CSMA/CD协议">
-                CSMA/CD协议 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/18/ip/" rel="prev" title="IP数据报">
+                IP数据报 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -680,7 +676,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#局域网的数据链路层"><span class="nav-number">1.</span> <span class="nav-text">局域网的数据链路层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局域网的拓扑"><span class="nav-number">2.</span> <span class="nav-text">局域网的拓扑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据链路层的两个子层"><span class="nav-number">3.</span> <span class="nav-text">数据链路层的两个子层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#适配器的重要功能："><span class="nav-number">4.</span> <span class="nav-text">适配器的重要功能：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ARP"><span class="nav-number">1.</span> <span class="nav-text">ARP</span></a></li></ol></div>
             
 
           </div>

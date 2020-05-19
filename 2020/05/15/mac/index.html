@@ -86,21 +86,22 @@
 
 
 
-<meta name="description" content="局域网的数据链路层局域网最主要的特点是：     网络为一个单位所拥有，且地理范围和站点数目均有限。（不含有网络层，因为它不需要路由器）局域网具有如下的一些主要优点：     - 具有广播功能，从一个站点可很方便地访问全网。局域网上的主机可共享连接在局域网上的各种硬件和软件资源。     - 便于系统的扩展和逐渐地演变，各设备的位置可灵活调整和改变。     - 提高了系统的可靠性、可用性和残存性">
+<meta name="description" content="使用集线器的星形拓扑以太网采用星形拓扑，在星形的中心则增加了一种可靠性非常高的设备，叫做集线器(hub)    集线器是使用电子器件来模拟实际电缆线的工作，因此整个系统仍然像一个传统的以太网那样运行。  使用集线器的以太网在逻辑上仍是一个总线网，各工作站使用的还是 CSMA&#x2F;CD 协议，并共享逻辑上的总线。  集线器很像一个多接口的转发器，工作在物理层。 （中继器也处于物理层）  以太网的 MAC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="局域网">
-<meta property="og:url" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/index.html">
+<meta property="og:title" content="mac和网桥">
+<meta property="og:url" content="http://yoursite.com/2020/05/15/mac/index.html">
 <meta property="og:site_name" content="林七七的博客">
-<meta property="og:description" content="局域网的数据链路层局域网最主要的特点是：     网络为一个单位所拥有，且地理范围和站点数目均有限。（不含有网络层，因为它不需要路由器）局域网具有如下的一些主要优点：     - 具有广播功能，从一个站点可很方便地访问全网。局域网上的主机可共享连接在局域网上的各种硬件和软件资源。     - 便于系统的扩展和逐渐地演变，各设备的位置可灵活调整和改变。     - 提高了系统的可靠性、可用性和残存性">
-<meta property="og:image" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/pu.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/tuo.png">
-<meta property="article:published_time" content="2020-05-14T08:48:25.000Z">
-<meta property="article:modified_time" content="2020-05-14T23:15:42.790Z">
+<meta property="og:description" content="使用集线器的星形拓扑以太网采用星形拓扑，在星形的中心则增加了一种可靠性非常高的设备，叫做集线器(hub)    集线器是使用电子器件来模拟实际电缆线的工作，因此整个系统仍然像一个传统的以太网那样运行。  使用集线器的以太网在逻辑上仍是一个总线网，各工作站使用的还是 CSMA&#x2F;CD 协议，并共享逻辑上的总线。  集线器很像一个多接口的转发器，工作在物理层。 （中继器也处于物理层）  以太网的 MAC">
+<meta property="og:image" content="http://yoursite.com/2020/05/15/mac/mac.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/15/mac/zhuan.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/15/mac/qiao.png">
+<meta property="article:published_time" content="2020-05-15T12:03:53.000Z">
+<meta property="article:modified_time" content="2020-05-18T00:09:51.632Z">
 <meta property="article:author" content="林丽">
 <meta property="article:tag" content="导航">
 <meta property="article:tag" content="分享">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/pu.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/15/mac/mac.png">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/05/14/c广播/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/15/mac/"/>
 
 
 
 
 
-  <title>局域网 | 林七七的博客</title>
+  <title>mac和网桥 | 林七七的博客</title>
   
 
 
@@ -297,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/14/c%E5%B9%BF%E6%92%AD/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/15/mac/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="林丽">
@@ -314,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">局域网</h1>
+          <h1 class="post-title" itemprop="name headline">mac和网桥</h1>
         
 
         <div class="post-meta">
@@ -326,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-14T16:48:25+08:00">
-                2020-05-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-15T20:03:53+08:00">
+                2020-05-15
               </time>
             
 
@@ -367,8 +368,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/05/14/c%E5%B9%BF%E6%92%AD/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/14/c%E5%B9%BF%E6%92%AD/" itemprop="commentCount"></span>
+                <a href="/2020/05/15/mac/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/15/mac/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,22 +402,96 @@
       
 
       
-        <h2 id="局域网的数据链路层"><a href="#局域网的数据链路层" class="headerlink" title="局域网的数据链路层"></a>局域网的数据链路层</h2><p><strong>局域网最主要的特点是</strong>：<br>     网络为一个单位所拥有，且地理范围和站点数目均有限。（不含有网络层，因为它不需要路由器）<br><strong>局域网具有如下的一些主要优点：</strong><br>     - 具有广播功能，从一个站点可很方便地访问全网。<strong>局域网上的主机可共享连接在局域网上的各种硬件和软件资源。</strong><br>     - 便于系统的扩展和逐渐地演变，各设备的位置可灵活调整和改变。<br>     - 提高了系统的可靠性、可用性和残存性。<br>     - 将 802.3 局域网简称为“以太网”。<br><em>“以太网”应当是指符合 DIX Ethernet V2 标准的局域网</em> </p>
-<hr>
-<h2 id="局域网的拓扑"><a href="#局域网的拓扑" class="headerlink" title="局域网的拓扑"></a>局域网的拓扑</h2><p><img src="/2020/05/14/c%E5%B9%BF%E6%92%AD/pu.png" alt> <img src="/2020/05/14/c%E5%B9%BF%E6%92%AD/tuo.png" alt><br>我们物理上使用的星型拓扑，但是逻辑上仍然使用总线型。</p>
-<hr>
-<h2 id="数据链路层的两个子层"><a href="#数据链路层的两个子层" class="headerlink" title="数据链路层的两个子层"></a>数据链路层的两个子层</h2><p>为了使数据链路层能更好地适应多种局域网标准，将局域网的数据链路层拆成两个子层：</p>
+        <h2 id="使用集线器的星形拓扑"><a href="#使用集线器的星形拓扑" class="headerlink" title="使用集线器的星形拓扑"></a>使用集线器的星形拓扑</h2><p>以太网采用星形拓扑，在星形的中心则增加了一种可靠性非常高的设备，叫做集线器(hub)  </p>
 <ul>
-<li>逻辑链路控制 LLC (Logical Link Control)子层</li>
-<li>媒体接入控制 MAC (Medium Access Control)子层。<pre><code>与接入到传输媒体有关的内容都放在 MAC子层,而 LLC 子层则与传输媒体无关
-不管采用何种协议的局域网对 LLC 子层来说都是透明的</code></pre></li>
+<li>集线器是使用电子器件来模拟实际电缆线的工作，因此整个系统仍然像一个传统的以太网那样运行。 </li>
+<li>使用集线器的以太网在逻辑上仍是一个总线网，各工作站使用的还是 CSMA/CD 协议，并共享逻辑上的总线。 </li>
+<li>集线器很像一个多接口的转发器，工作在物理层。 （中继器也处于物理层）</li>
+</ul>
+<h2 id="以太网的-MAC-层"><a href="#以太网的-MAC-层" class="headerlink" title="以太网的 MAC 层"></a>以太网的 MAC 层</h2><ul>
+<li>在局域网中，硬件地址又称为物理地址，或 MAC 地址。 MAC地址占用6个字节<br>适配器从网络上每收到一个 MAC 帧就首先用硬件检查 MAC 帧中的 MAC 地址.</li>
+<li>如果是发往本站的帧则收下，然后再进行其他的处理。</li>
+<li>否则就将此帧丢弃，不再进行其他的处理。</li>
+</ul>
+<h2 id="“发往本站的帧”包括以下三种帧："><a href="#“发往本站的帧”包括以下三种帧：" class="headerlink" title="“发往本站的帧”包括以下三种帧："></a>“发往本站的帧”包括以下三种帧：</h2><ul>
+<li>单播(unicast)帧（一对一）</li>
+<li>广播(broadcast)帧（一对全体）</li>
+<li>多播(multicast)帧（一对多）</li>
+</ul>
+<h2 id="常用的以太网MAC帧格式有两种标准-："><a href="#常用的以太网MAC帧格式有两种标准-：" class="headerlink" title="常用的以太网MAC帧格式有两种标准 ："></a>常用的以太网MAC帧格式有两种标准 ：</h2><p>DIX Ethernet V2 标准<br>IEEE 的 802.3 标准<br>最常用的 MAC 帧是以太网 V2 的格式<br><img src="/2020/05/15/mac/mac.png" alt></p>
+<pre><code>类型字段用来标志上一层使用的是什么协议，以便把收到的 MAC 帧的数据上交给上一层的这个协议。
+数据字段的正式名称是 MAC 客户数据字段
+最小长度 64 字节-18 字节的首部和尾部 = 数据字段的最小长度 
+在帧的前面插入的 8 字节中的第一个字段共 7 个字节，
+是前同步码，用来迅速实现 MAC 帧的比特同步。
+第二个字段是帧开始定界符，表示后面的信息就是MAC 帧
+</code></pre><hr>
+<h2 id="无效的-MAC-帧"><a href="#无效的-MAC-帧" class="headerlink" title="无效的 MAC 帧"></a>无效的 MAC 帧</h2><ul>
+<li>数据字段的长度与长度字段的值不一致；</li>
+<li>帧的长度不是整数个字节；</li>
+<li>用收到的帧检验序列 FCS 查出有差错；</li>
+<li>数据字段的长度不在 46 ~ 1500 字节之间。</li>
+<li>有效的 MAC 帧长度为 64 ~ 1518 字节之间。</li>
+<li>对于检查出的无效 MAC 帧就简单地丢弃。以太网不负责重传丢弃的帧。 </li>
+</ul>
+<h2 id="在物理层用集线器扩展局域网"><a href="#在物理层用集线器扩展局域网" class="headerlink" title="在物理层用集线器扩展局域网"></a>在物理层用集线器扩展局域网</h2><p>优点</p>
+<ul>
+<li>使原来属于不同碰撞域的局域网上的计算机能够进行跨碰撞域的通信。</li>
+<li>扩大了局域网覆盖的地理范围。</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>碰撞域增大了，但总的吞吐量并未提高。</li>
+<li>如果不同的碰撞域使用不同的数据率，那么就不能用集线器将它们互连起来。 </li>
+</ul>
+<h2 id="在数据链路层使用网桥扩展局域网"><a href="#在数据链路层使用网桥扩展局域网" class="headerlink" title="在数据链路层使用网桥扩展局域网"></a>在数据链路层使用网桥扩展局域网</h2><ul>
+<li><p>网桥工作在数据链路层，它根据 MAC 帧的目的地址对收到的帧进行转发。</p>
+</li>
+<li><p>网桥具有过滤帧的功能。当网桥收到一个帧时，并不是向所有的接口转发此帧，而是先检查此帧的目的 MAC 地址，然后再确定将该帧转发到哪一个接口 </p>
+<p>使用网桥带来的好处 </p>
+<ul>
+<li>过滤通信量。 </li>
+<li>扩大了物理范围。</li>
+<li>提高了可靠性。</li>
+<li>可互连不同物理层、不同 MAC 子层和不同速率（如10 Mb/s 和 100 Mb/s 以太网）的局域网。</li>
+</ul>
+<p>使用网桥带来的缺点</p>
+<ul>
+<li>存储转发增加了时延。 </li>
+<li>在MAC 子层并没有流量控制功能。 </li>
+<li>具有不同 MAC 子层的网段桥接在一起时时延更大。</li>
+<li>网桥只适合于用户数不太多(不超过几百个)和通信量不太大的局域网，否则有时还会因传播过多的广播信息而产生网络拥塞。这就是所谓的广播风暴。  </li>
+</ul>
+<p><img src="/2020/05/15/mac/zhuan.png" alt></p>
+<hr>
+<h2 id="网桥和集线器（或转发器）不同"><a href="#网桥和集线器（或转发器）不同" class="headerlink" title="网桥和集线器（或转发器）不同"></a>网桥和集线器（或转发器）不同</h2><ul>
+<li>集线器在转发帧时，不对传输媒体进行检测。</li>
+<li>网桥在转发帧之前必须执行 CSMA/CD 算法。<br>  若在发送过程中出现碰撞，就必须停止发送和进行退避。</li>
+</ul>
+</li>
 </ul>
 <hr>
-<h2 id="适配器的重要功能："><a href="#适配器的重要功能：" class="headerlink" title="适配器的重要功能："></a>适配器的重要功能：</h2><ul>
-<li>进行串行/并行转换。</li>
-<li>对数据进行缓存。</li>
-<li>在计算机的操作系统安装设备驱动程序。</li>
-<li>实现以太网协议。  </li>
+<h2 id="网桥"><a href="#网桥" class="headerlink" title="网桥"></a>网桥</h2><p>目前使用得最多的网桥是透明网桥(transparent bridge)。<br>网桥算法</p>
+<pre><code>1.若从 A 发出的帧从接口 x 进入了某网桥，那么从这个接口出发沿相反方向一定可把一个帧传送到 A。
+2.网桥每收到一个帧，就记下其源地址和进入网桥的接口，作为转发表中的一个项目。
+3.在建立转发表时是把帧首部中的源地址写在“地址”这一栏的下面。
+4.在转发帧时，则是根据收到的帧首部中的目的地址来转发的。这时就把在“地址”栏下面已经记下的源地址当作目的地址，而把记下的进入接口当作转发接口。</code></pre><p><img src="/2020/05/15/mac/qiao.png" alt><br><strong>网桥在转发表中登记以下三个信息</strong></p>
+<pre><code>在网桥的转发表中写入的信息除了地址和接口外，还有帧进入该网桥的时间。</code></pre><p><strong>转发帧</strong>：查找转发表中与收到帧的目的地址有无相匹配的项目。</p>
+<ul>
+<li><p>如没有，则通过所有其他接口（但进入网桥的接口除外）按进行转发。</p>
+</li>
+<li><p>如有，则按转发表中给出的接口进行转发。</p>
+</li>
+<li><p>若转发表中给出的接口就是该帧进入网桥的接口，则应丢弃这个帧（因为这时不需要经过网桥进行转发）。<br>透明网桥使用了生成树算法：这是为了避免产生转发的帧在网络中不断地兜圈子。 </p>
+</li>
+<li><p>在任何两个站之间只有一条路径。</p>
+<h2 id="多接口网桥——以太网交换机"><a href="#多接口网桥——以太网交换机" class="headerlink" title="多接口网桥——以太网交换机"></a>多接口网桥——以太网交换机</h2></li>
+<li><p>以太网交换机的每个接口都直接与主机相连，并且一般都工作在全双工方式。</p>
+</li>
+<li><p>交换机能同时连通许多对的接口，使每一对相互通信的主机都能像独占通信媒体那样，进行无碰撞地传输数据。 </p>
+</li>
+<li><p>以太网交换机由于使用了专用的交换结构芯片，其交换速率就较高。    </p>
+</li>
 </ul>
 
       
@@ -487,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/14/ppp%E5%8D%8F%E8%AE%AE/" rel="next" title="ppp协议">
-                <i class="fa fa-chevron-left"></i> ppp协议
+              <a href="/2020/05/14/csma-cd%E5%8D%8F%E8%AE%AE/" rel="next" title="CSMA/CD协议">
+                <i class="fa fa-chevron-left"></i> CSMA/CD协议
               </a>
             
           </div>
@@ -497,8 +572,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/05/14/csma-cd%E5%8D%8F%E8%AE%AE/" rel="prev" title="CSMA/CD协议">
-                CSMA/CD协议 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/17/%E7%BD%91%E7%BB%9C/" rel="prev" title="网络层">
+                网络层 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -680,7 +755,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#局域网的数据链路层"><span class="nav-number">1.</span> <span class="nav-text">局域网的数据链路层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局域网的拓扑"><span class="nav-number">2.</span> <span class="nav-text">局域网的拓扑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据链路层的两个子层"><span class="nav-number">3.</span> <span class="nav-text">数据链路层的两个子层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#适配器的重要功能："><span class="nav-number">4.</span> <span class="nav-text">适配器的重要功能：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用集线器的星形拓扑"><span class="nav-number">1.</span> <span class="nav-text">使用集线器的星形拓扑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以太网的-MAC-层"><span class="nav-number">2.</span> <span class="nav-text">以太网的 MAC 层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“发往本站的帧”包括以下三种帧："><span class="nav-number">3.</span> <span class="nav-text">“发往本站的帧”包括以下三种帧：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的以太网MAC帧格式有两种标准-："><span class="nav-number">4.</span> <span class="nav-text">常用的以太网MAC帧格式有两种标准 ：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无效的-MAC-帧"><span class="nav-number">5.</span> <span class="nav-text">无效的 MAC 帧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在物理层用集线器扩展局域网"><span class="nav-number">6.</span> <span class="nav-text">在物理层用集线器扩展局域网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在数据链路层使用网桥扩展局域网"><span class="nav-number">7.</span> <span class="nav-text">在数据链路层使用网桥扩展局域网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网桥和集线器（或转发器）不同"><span class="nav-number">8.</span> <span class="nav-text">网桥和集线器（或转发器）不同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网桥"><span class="nav-number">9.</span> <span class="nav-text">网桥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多接口网桥——以太网交换机"><span class="nav-number">10.</span> <span class="nav-text">多接口网桥——以太网交换机</span></a></li></ol></div>
             
 
           </div>
