@@ -537,4 +537,37 @@ S 站的码片序列：(–1 –1 –1 +1 +1 –1 +1 +1)</code></pre></li>
 </ul>
 ]]></content>
   </entry>
+  <entry>
+    <title>git</title>
+    <url>/2020/06/14/git/</url>
+    <content><![CDATA[<ul>
+<li>登录：<br>git config –global user.name “XXXXX”;<br>git config –global user.email “XXXX@XXXX”</li>
+<li>克隆<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">克隆master:</span><br><span class="line">git clone 地址（.git）</span><br><span class="line">克隆分支：</span><br><span class="line">git clone -b 地址（.git）</span><br></pre></td></tr></table></figure></li>
+<li>提交：<br>git add +文件名字<br>git add .<br>git add -f +文件名字</li>
+<li>备注：<br>git commit -m “备注消息”</li>
+<li>创建分支：<br>git branch +名字</li>
+<li>切换分支：<br>git checkout +名字</li>
+<li>切换与创建分支：<br>git checkout -b +名字</li>
+<li>查看分支：<br>git branch</li>
+<li>上传<br>git push origin + 分支名字/master</li>
+<li>查看分支状态<br>git status</li>
+<li>查看不同<br>git diff</li>
+<li>拉下来<br>git pull</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>redis</title>
+    <url>/2020/06/14/redis/</url>
+    <content><![CDATA[<ul>
+<li>redis的数据类型<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">string:(ket___values)类型</span><br><span class="line">hash:(key__(key__values))类型</span><br><span class="line">list:(key的values以双向链表连接起来)类型</span><br><span class="line">set:(去掉重复，无序是一个key对应的values)</span><br><span class="line">zset:(没有重复，有序,一个key对应多个values)</span><br></pre></td></tr></table></figure></li>
+<li>性能高，存在内存中<br>所以持久化差（可以通过AOF,RDB来进行持久化处理）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AOF:是通过每一次对数据库进行改变的操作都会存在文件中，所以文件大，执行起来比较困难</span><br><span class="line">RDB:是通过快照来实现持久化的，他的文件小（默认）</span><br></pre></td></tr></table></figure></li>
+<li>redis做缓存<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">XXXXXXXXXX</span><br><span class="line">其中会有mysql的加锁的机制</span><br></pre></td></tr></table></figure>
+缓存雪崩：大多数redis中的key都过期产生的现象。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.设置随机过期时间（24+随机数）</span><br><span class="line">2.保证redis集群的高可用，选择合适的内存淘汰机制，淘汰掉过期的数据</span><br><span class="line">3.在缓存失效后，通过加锁或者队列来控制读数据库写缓存的线程数量</span><br></pre></td></tr></table></figure>
+缓存穿透：是指缓存和数据库中都没有的数据，而用户不断发起请求<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">接口层增加校验，如用户鉴权校验，id做基础校验，id&lt;&#x3D;0的直接拦截；</span><br><span class="line">从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反复用同一个id暴力攻击</span><br></pre></td></tr></table></figure></li>
+<li>redis批量操作-事务<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">multi：开启事务用于标记事务的开始，其后执行的命令都将被存入命令队列，直到执行EXEC时，这些命令才会被原子的执行，类似与关系型数据库中的：begin transaction</span><br><span class="line">exec：提交事务，类似与关系型数据库中的：commit        执行批量化</span><br><span class="line">discard：事务回滚，类似与关系型数据库中的：rollback     不执行批量化操作</span><br></pre></td></tr></table></figure></li>
+<li>redis事务的检查机制：<br>固定检查和惰性检查</li>
+</ul>
+]]></content>
+  </entry>
 </search>
